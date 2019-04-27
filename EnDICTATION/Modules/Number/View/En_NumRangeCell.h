@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class En_NumRangeCModel;
 @interface En_NumRangeCell : UICollectionViewCell
-
+@property(nonatomic,strong)En_NumRangeCModel * model;
 @end
 
 NS_ASSUME_NONNULL_END

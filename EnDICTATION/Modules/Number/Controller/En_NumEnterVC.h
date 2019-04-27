@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class En_NumVC;
+typedef void (^textFieldCB)(NSNumber * fromNum,NSNumber * toNum);
 @interface En_NumEnterVC : UIViewController
+@property(nonatomic,copy)textFieldCB textCB;
 
 @end
 

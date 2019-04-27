@@ -9,7 +9,9 @@
 #ifndef EnDICT_pch
 #define EnDICT_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIView+Frame.h"
+#import "NSString+Additions.h"
+#import "En_Const.h"
+#import "En_Untils.h"
 
 #endif /* EnDICT_pch */

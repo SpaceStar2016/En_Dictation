@@ -1,5 +1,5 @@
 //
-//  En_NumRateCell.h
+//  En_NumRanConView.h
 //  EnDICTATION
 //
 //  Created by Space Zhong on 2019/4/21.
@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class En_NumRateCModel;
-@interface En_NumRateCell : UICollectionViewCell
-@property(nonatomic,strong)En_NumRateCModel * model;
+
+@interface En_NumRangeView : UIView
+
 @end
 
 NS_ASSUME_NONNULL_END

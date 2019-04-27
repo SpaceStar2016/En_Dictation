@@ -7,26 +7,26 @@
 //
 
 #import "En_MainSetVC.h"
-
+#import "En_MainSetView.h"
 @interface En_MainSetVC ()
-
+@property(nonatomic,weak)En_MainSetView * setView;
 @end
 
 @implementation En_MainSetVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    WEAKSELF;
+    En_MainSetView * setView = [En_MainSetView mainSetView];
+    setView.frame = self.view.bounds;
+    setView.goback = ^{
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    };
+    [self.view addSubview:setView];
+    self.setView = setView;
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

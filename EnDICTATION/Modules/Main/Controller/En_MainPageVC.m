@@ -7,26 +7,54 @@
 //
 
 #import "En_MainPageVC.h"
-
-@interface En_MainPageVC ()
-
+#import "En_MainPageView.h"
+#import "En_MainSetVC.h"
+#import "En_NumVC.h"
+@interface En_MainPageVC ()<En_MainPageViewDelegate>
+@property(nonatomic,weak)En_MainPageView * mainPageView;
 @end
 
 @implementation En_MainPageVC
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    En_MainPageView * mainPageView  = [En_MainPageView mainPageView];
+    mainPageView.frame = self.view.bounds;
+    mainPageView.delegate = self;
+    [self.view addSubview:mainPageView];
+    self.mainPageView = mainPageView;
+    
+    self.view.backgroundColor = En_GlobalWhite;
+  
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark En_MainPageViewDelegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)mainPageView:(En_MainPageView*)pageView numberCli:(UIButton *)btn
+{
+    En_NumVC * numVC = [[En_NumVC alloc] init];
+    [self presentViewController:numVC animated:YES completion:nil];
 }
-*/
+-(void)mainPageView:(En_MainPageView*)pageView dateCli:(UIButton *)btn
+{
+    NSLog(@"dateCli");
+}
+
+-(void)mainPageView:(En_MainPageView*)pageView vocaCli:(UIButton *)btn
+{
+    NSLog(@"vocaCli");
+}
+-(void)mainPageView:(En_MainPageView*)pageView senCli:(UIButton *)btn
+{
+    NSLog(@"senCli");
+}
+
+-(void)mainPageView:(En_MainPageView*)pageView settingCli:(UIButton *)btn
+{
+    En_MainSetVC * setVC = [[En_MainSetVC alloc] init];
+    [self presentViewController:setVC animated:YES completion:nil];
+}
 
 @end

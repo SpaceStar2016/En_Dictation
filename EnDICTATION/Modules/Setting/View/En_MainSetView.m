@@ -7,15 +7,30 @@
 //
 
 #import "En_MainSetView.h"
+@interface En_MainSetView()
+@property (weak, nonatomic) IBOutlet UIButton *gobackBtn;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+@end
 @implementation En_MainSetView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++(instancetype)mainSetView
+{
+    return [[[NSBundle mainBundle] loadNibNamed:@"En_MainSetView" owner:nil options:nil] lastObject];
 }
-*/
+
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.textLabel.textColor = En_GlobalTextGrey;
+}
+
+- (IBAction)gobackCli:(UIButton *)sender
+{
+    if (self.goback) {
+        self.goback();
+    }
+}
 
 @end

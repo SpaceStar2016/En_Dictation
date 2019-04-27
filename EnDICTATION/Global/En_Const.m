@@ -7,7 +7,3 @@
 //
 
 #import "En_Const.h"
-
-@implementation En_Const
-
-@end

@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+typedef void (^GOBACK)(void);
 
 @interface En_MainSetView : UIView
+
+@property (nonatomic,copy)GOBACK goback;
+
++(instancetype)mainSetView;
 
 @end
 

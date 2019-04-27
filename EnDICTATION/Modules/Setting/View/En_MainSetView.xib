@@ -1,18 +1,57 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="En_MainSetView">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="渴望您更多宝贵的意见，欢迎联系570175236@qq.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypZ-nF-Rgu">
+                    <rect key="frame" x="87.5" y="311.5" width="200" height="64.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="cd6-oc-zK4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZq-0b-wf4">
+                    <rect key="frame" x="15" y="30" width="36" height="36"/>
+                    <state key="normal" image="En_MainBack"/>
+                    <connections>
+                        <action selector="gobackCli:" destination="iN0-l3-epB" eventType="touchUpInside" id="eQ7-38-Rbn"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FSW-fa-Bxn">
+                    <rect key="frame" x="67" y="132" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ypZ-nF-Rgu" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="24q-aJ-nGM"/>
+                <constraint firstItem="ypZ-nF-Rgu" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="EsO-4R-wXJ"/>
+                <constraint firstItem="bZq-0b-wf4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="gcu-ZA-bcU"/>
+                <constraint firstItem="bZq-0b-wf4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="nsu-fm-NNi"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="gobackBtn" destination="bZq-0b-wf4" id="hAE-vS-rX6"/>
+                <outlet property="imageView" destination="FSW-fa-Bxn" id="Kp6-mr-fZw"/>
+                <outlet property="textLabel" destination="ypZ-nF-Rgu" id="Eu5-eg-yBV"/>
+            </connections>
         </view>
     </objects>
+    <resources>
+        <image name="En_MainBack" width="36" height="36"/>
+    </resources>
 </document>

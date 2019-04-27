@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface En_NumSouMo : NSObject
-
+@property(nonatomic,strong)NSNumber * num;
 @end
 
 NS_ASSUME_NONNULL_END
