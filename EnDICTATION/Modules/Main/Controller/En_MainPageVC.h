@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  En_MainPageVC.h
 //  EnDICTATION
 //
 //  Created by Space Zhong on 2019/4/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface En_MainPageVC : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
