@@ -562,7 +562,7 @@
     {
         WEAKSELF;
         En_NumEnterVC * eVC = [[En_NumEnterVC alloc] init];
-        eVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        eVC.modalPresentationStyle = UIModalPresentationFullScreen;
         eVC.textCB = ^(NSNumber * _Nonnull fromNum, NSNumber * _Nonnull toNum) {
             weakSelf.fromNum = fromNum;
             weakSelf.toNum = toNum;

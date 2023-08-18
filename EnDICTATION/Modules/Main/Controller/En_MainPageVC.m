@@ -35,6 +35,7 @@
 -(void)mainPageView:(En_MainPageView*)pageView numberCli:(UIButton *)btn
 {
     En_NumVC * numVC = [[En_NumVC alloc] init];
+    numVC.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:numVC animated:YES completion:nil];
 }
 -(void)mainPageView:(En_MainPageView*)pageView dateCli:(UIButton *)btn
