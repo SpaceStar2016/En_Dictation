@@ -234,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				FC61EEAB226B018700D0DA44 /* Setting */,
-				FC61EE8A2269EB9700D0DA44 /* Date */,
 				FC61EE892269EB8B00D0DA44 /* Number */,
 				FC61EE882269EB7900D0DA44 /* Main */,
 			);
@@ -244,7 +243,6 @@
 		FC61EE882269EB7900D0DA44 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FC61EE8B2269EB9F00D0DA44 /* Model */,
 				FC61EE8D2269EBAB00D0DA44 /* View */,
 				FC61EE8C2269EBA400D0DA44 /* Controller */,
 			);
@@ -259,20 +257,6 @@
 				FC401EB3226B0D1C0000C194 /* Controller */,
 			);
 			path = Number;
-			sourceTree = "<group>";
-		};
-		FC61EE8A2269EB9700D0DA44 /* Date */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Date;
-			sourceTree = "<group>";
-		};
-		FC61EE8B2269EB9F00D0DA44 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		FC61EE8C2269EBA400D0DA44 /* Controller */ = {
@@ -325,7 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				FC61EEAE226B021400D0DA44 /* View */,
-				FC61EEAD226B020C00D0DA44 /* Model */,
 				FC61EEAC226B020500D0DA44 /* Controller */,
 			);
 			path = Setting;
@@ -338,13 +321,6 @@
 				FC61EEB0226B022F00D0DA44 /* En_MainSetVC.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		FC61EEAD226B020C00D0DA44 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		FC61EEAE226B021400D0DA44 /* View */ = {
